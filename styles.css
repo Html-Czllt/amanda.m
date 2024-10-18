@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,6 +17,10 @@ header {
     text-align: center;
     position: relative;
     z-index: 10;
+}
+
+p{
+    width: 50%;
 }
 
 .section2 {
