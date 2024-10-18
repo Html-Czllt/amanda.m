@@ -9,6 +9,10 @@ body {
     min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
 }
 
+.card p{
+    width: 95%;
+}
+
 header {
     background-color: #0a0d1b; /* Verde pastel escuro */
     border-bottom: 5px solid rgb(255, 255, 255);
