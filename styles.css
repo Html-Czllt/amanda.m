@@ -1,0 +1,253 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+}
+
+header {
+    background-color: #0a0d1b; /* Verde pastel escuro */
+    border-bottom: 5px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.section2 {
+    height: 100vh; /* Seção 2 ocupa toda a altura da tela */
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha itens ao topo */
+    text-align: center;
+    padding: 20px 0; /* Espaço ao redor da seção */
+}
+
+.section2 h2 {
+    font-size: 2em; /* Tamanho do texto do título */
+    margin: 0; /* Remove a margem */
+    padding: 20px 0; /* Espaço acima e abaixo do título */
+    color: #333; /* Cor do texto */
+}
+
+
+
+.dropbtn {
+    background-color: #6FAF60; /* Cor de fundo verde claro */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+.dropbtn:hover {
+    background-color: #5a9a50; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: rgb(27, 32, 54); /* Cor de fundo mais escura para combinar com o cabeçalho */
+    color: #ffffff; /* Texto branco */
+    padding: 10px 20px; /* Um pouco mais de padding para torná-lo mais largo */
+    font-size: 16px;
+    border: white solid 1px;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.dropbtn:hover {
+    background-color: rgb(49, 56, 87); /* Verde mais claro ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumentar um pouco */
+}
+
+
+.dropdown-content {
+    display: none; /* Oculta por padrão */
+    position: absolute; /* Posiciona abaixo do botão */
+    background-color: #f9f9f9; /* Cor de fundo do dropdown */
+    min-width: 160px; /* Largura mínima */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1; /* Acima de outros elementos */
+    border-radius: 5px; /* Bordas arredondadas */
+    opacity: 0; /* Começa invisível */
+    visibility: hidden; /* Fica invisível inicialmente */
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s; /* Transições suaves */
+    text-align: center; /* Centraliza o texto */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Exibe o dropdown ao passar o mouse */
+    opacity: 1; /* Torna-o visível */
+    visibility: visible; /* Garante que ele fique visível */
+    transition: opacity 0.5s ease; /* Transição de opacidade ao aparecer */
+}
+
+.dropdown-content a {
+    color: black; /* Cor do texto dos links */
+    padding: 12px 16px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Cada link ocupa toda a largura */
+}
+
+.dropdown-content a:hover {
+    background-color: #E0E0E0; /* Cor de fundo ao passar o mouse sobre o link */
+}
+
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante */
+}
+
+.section1 {
+    height: 60vh; /* Define a altura da seção 1 como 60% da altura da tela */
+    background-image: url('https://images.pexels.com/photos/531756/pexels-photo-531756.jpeg?cs=srgb&dl=pexels-pixabay-531756.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.content {
+    background-color: #ffffff; /* Branco */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente as imagens */
+    margin-top: 10px; /* Reduz a margem entre as imagens e o cabeçalho */
+}
+
+.image-wrapper {
+    position: relative; /* Necessário para o posicionamento do texto */
+    margin: 0 10px; /* Afastamento entre as imagens */
+    width: 300px; /* Define a largura do wrapper */
+    height: 300px; /* Define a altura do wrapper */
+}
+
+.image-wrapper img {
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 100%; /* Ajusta para ocupar toda a largura do wrapper */
+    height: 100%; /* Ajusta para ocupar toda a altura do wrapper */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.05); /* Efeito de pulsar */
+}
+
+.text-overlay {
+    position: absolute;
+    top: -20%; /* Coloca o texto 20% acima da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar exatamente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    color: black;
+    text-align: center;
+    padding: 5px 10px; /* Padding para ampliar */
+    border-radius: 8px; /* Bordas arredondadas */
+    z-index: 1; /* Garante que o texto fique sobre a imagem */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease; /* Transição suave para o texto */
+}
+
+.image-wrapper:hover .text-overlay {
+    opacity: 1; /* Texto se torna visível ao passar o mouse */
+}
+
+.section2 {
+    height: 100vh; /* Seção 2 ocupa toda a altura da tela */
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 0; /* Espaço ao redor da seção */
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around; /* Espaço entre os cards */
+    width: 80%; /* Largura dos cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a linha seguinte */
+}
+
+.card {
+    position: relative; /* Para o background da card */
+    background-color: white; /* Fundo branco para cada card */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 250px; /* Largura do card */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px; /* Margem entre os cards */
+    overflow: hidden; /* Para evitar que o conteúdo transborde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(2deg); /* Aumenta o tamanho e gira levemente */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+}
+
+.card img {
+    width: 300px; /* Largura fixa */
+    height: 200px; /* Altura fixa para manter o tamanho consistente */
+    object-fit: cover; /* Mantém a proporção sem distorcer a imagem */
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas na parte de cima */
+    transition: transform 0.3s ease; /* Transição suave para a imagem */
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Aumenta a imagem levemente ao passar o mouse */
+}
+
+
+.card-background {
+    position: absolute; /* Para posicionar o background no card */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Fica atrás do conteúdo do card */
+}
+
+.card img {
+    width: 300px; /* Largura fixa */
+    height: 200px; /* Altura fixa para manter o tamanho consistente */
+    object-fit: cover; /* Mantém a proporção sem distorcer a imagem */
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas na parte de cima */
+}
+
+
+.card p {
+    padding: 10px; /* Espaçamento interno do texto */
+    color: #333; /* Cor do texto */
+    z-index: 1; /* Fica acima do fundo do card */
+    position: relative; /* Para z-index funcionar */
+}
+
+footer {
+    background-color: #0a0d1b; /* Verde pastel escuro */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
